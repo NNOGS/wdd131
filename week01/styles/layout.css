@@ -1,0 +1,100 @@
+:root{
+    --primary-color: #ffffff;
+    --secondary-color: #333333;
+    --tetiary-color: #000000;
+    --accent-color: #e0c4a5;
+    --accent-color2: #cfcfcf;
+    --font-family: 'Arial, sans-serif';
+}
+
+/* General rule */
+* {
+    width: 840px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* The Governing rule for the html body */
+body {
+    margin: 2rem;
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    justify-content: center;
+    padding: 4rem;
+}
+
+/* The Governing rule for the all h1 in the html structure it is linked. */
+h1 {
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    font-size: 20px;
+    width: 300px;
+    padding: 2rem;
+}
+
+/* The rule for the div container with the class called "heading" in the header section of the html structure.  */
+.heading {
+    background-color: var(--secondary-color);
+    text-align: left;
+    width: 840px;
+    
+}
+
+/*  Here is for all codes in the nav section of the page */
+nav {
+    background-color: var(--tetiary-color);
+    padding: 0.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    gap: 2rem;
+    
+
+}
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 2rem;
+    gap: 2rem;
+    margin: .5rem 2rem .5rem 2rem;
+    
+}
+
+/* Main and Aside codes guided by a gride code to achieve the desired design it is linked to in the html structure */
+.clear {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 0rem;
+    width: 840px;
+    border: none;   
+}
+
+main {
+    background-color: var(--accent-color2);
+    color: var(--tetiary-color);
+    width: 590px;
+}
+
+aside {
+    color: var(--tetiary-color);
+    width: 250px;
+}
+
+/* The code for all h3 headings, apparently it affected all in he div container "clear" */
+h3 {
+    margin: 0.5rem auto 15rem 2rem;
+}
+
+/* Footer codes */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 2rem;
+
+}
+
+p {
+    margin: 0 auto 2rem auto;
+}
