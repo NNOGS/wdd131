@@ -103,7 +103,10 @@ nav a:hover {
 .about-me p {
     margin: 2rem 0 4rem 1rem;
 }
-
+.about-me img{
+    border: 1px solid var(--accent2-color);
+    border-radius: 1rem;
+}
 .card img {
     float: right;
     margin: 0 1rem 0.5rem 0.5rem;
