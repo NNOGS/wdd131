@@ -1,0 +1,50 @@
+/* temples-large.css */
+@media (min-width: 700px) {
+  /* Hide hamburger, show nav horizontally */
+  .hamburger {
+    display: none;
+  }
+  header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+
+  main p {
+	text-align: center;
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+  }
+
+  .nav-menu {
+    display: block !important;
+	margin-left: auto;
+    background: none;
+  }
+
+  #nav-menu ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+
+  .nav-menu a {
+	display: flex;
+	justify-content: end;
+    color: white;
+  }
+
+  /* GRID: 3 COLUMNS */
+  .gallery {
+	display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+	gap: 20px;
+  }
+
+  figure img {
+    height: 180px;
+	width: 200px;
+	grid-template-columns: 1fr 1fr 1fr;
+  }
+}
