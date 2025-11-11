@@ -49,13 +49,12 @@
   }
 
   footer {
-    background-color: #004080;
-    border-radius: 8px;;
-  }
-
-  footer p {
+    background-color: #555;
     color: antiquewhite;
-    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 8px;
+     font-size: 1.1rem;
     font-weight: 600;
   }
+
 }
