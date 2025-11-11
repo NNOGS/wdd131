@@ -47,4 +47,15 @@
 	width: 200px;
 	grid-template-columns: 1fr 1fr 1fr;
   }
+
+  footer {
+    background-color: #004080;
+    border-radius: 8px;;
+  }
+
+  footer p {
+    color: antiquewhite;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
 }
