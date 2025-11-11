@@ -1,4 +1,13 @@
 /* temples.css - Mobile-first design */
+:root {
+  --primary-color: #555;
+  --secondary-color: #f2f2f2;
+  --tetiary-color: #444;
+  --accent-color: #f9fafc;
+  --constant-color: white;
+  --text-color: #222;
+  --font-family: 'Inter', sans-serif;}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +16,16 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f9fafc;
-  color: #222;
+  background-color: var(--accent-color);
+  color: var(--text-color);
   line-height: 1.5;
   padding: 0 1rem;
 }
 
 /* HEADER */
 header {
-  background-color: #555;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--constant-color);
   padding: 1rem;
   position: relative;
   margin-top: 4px;
@@ -34,7 +43,7 @@ header h1 {
   right: 1rem;
   background: none;
   border: none;
-  color: white;
+  color: var(--constant-color);
   font-size: 2rem;
   cursor: pointer;
 }
@@ -61,7 +70,7 @@ header h1 {
 
 .nav-menu a {
   text-decoration: none;
-  color: white;
+  color: var(--constant-color);
   font-weight: 600;
   padding: 0.5rem;
   border-radius: 4px;
@@ -69,7 +78,7 @@ header h1 {
 }
 
 .nav-menu a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--tetiary-color);
 }
 
 /* MAIN */
@@ -95,10 +104,10 @@ main p {
 
 
 figure {
-  background: white;
+  background: var(--constant-color);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px var(--tetiary-color);
 }
 
 figure img {
@@ -111,7 +120,7 @@ figcaption {
   text-align: center;
   padding: 0.75rem;
   font-weight: 600;
-  background: #f2f2f2;
+  background: var(--secondary-color);
 }
 
 /* FOOTER */
@@ -120,7 +129,7 @@ footer {
   margin: 2rem 0;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #f2f2f2;
-  background: #555;
+  color: var(--secondary-color);
+  background: var(--primary-color);
   border-radius: 8px;
 }
