@@ -1,9 +1,10 @@
 :root {
-  --primary: #008751;
+  --primary-color: #2be299;
+  --secondary: #008751;
   --accent: #ffffff;
   --muted: #B0BEC5;
   --text: #222;
-  --card-bg: #ffffff;
+  --card-bg: #fffdf9ee;
   --shadow: rgba(0,0,0,0.12);
   --focus: #66bb6a;
   --break-lg: 900px;
@@ -21,7 +22,7 @@ body{
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: var(--text);
   background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 100%);
-  margin: 0.2rem;
+  margin: 0.5rem;
   line-height: 1.4;
 }
 
@@ -41,7 +42,7 @@ h1 {
 }
 
 h2 {
-    background-color: #2be299;
+    background-color: var(--primary-color);
     margin-left: -1.5rem;
     padding: 1rem;
 }
@@ -87,28 +88,32 @@ h2 {
 }
 .data-card h2 {
     max-width: 200px;
-    background-color: #2be299;
+    background-color: var(--primary-color);
     margin-left: -1.5rem;
     padding: 1rem;
 }
 
-.weather-card h2::after {
-    content: "⛅";
+.weather-card img {
+    height:fit-content;
+    width:fit-content;
+    margin-top: -3.8rem;
+    margin-left: 20rem;
+    background-color: var(--card-bg);
 }
+
 
 footer {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   font-size: smaller;
-  margin: 1rem 0 0.2rem;
 }
 .first-green {
-    background-color: #2be299;
+    background-color: var(--primary-color);
 }
 
 .last-green {
-    background-color: #2be299;
+    background-color: var(--primary-color);
 }
 /* for larger screens */
 @media (min-width: 700px) {
@@ -122,8 +127,14 @@ footer {
 }
 
   @media (min-width: 700px) {
-  .weather-card-heading::after  {
+  .weather-card h2::after  {
     content: "⛅";
+  }
 
+  @media (min-width: 700px) {
+    .weather-card img {
+        display: none;
+    }
   }
 }
+
