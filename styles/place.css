@@ -5,7 +5,7 @@
   --muted: #B0BEC5;
   --text: #222;
   --card-bg: #fffdf9ee;
-  --shadow: rgba(0,0,0,0.12);
+  --surface-shadow: rgba(0,0,0,0.12);
   --focus: #66bb6a;
   --break-lg: 900px;
 }
@@ -47,44 +47,50 @@ h2 {
     padding: 1rem;
 }
 
+
 .hero img {
   display: block;  
   width: 100%;
   height: 620px;
   overflow: hidden;
-  box-shadow: 0 4px 6px var(--shadow);
-  position:absolute;
+  box-shadow: 0 4px 6px var(--surface-shadow);
+  position: relative;
   
 }
 
 .data-card {
-  background-color: var(--shadow);
+  background-color: var(--surface-shadow);
   color: var(--accent);
   padding: 1rem;
-  border: 1rem;
+  border: 0.2rem solid transparent;
   margin: 2rem 1rem 0;
-  box-shadow: 0 4px 6px var(--shadow);
+  box-shadow: 0 4px 6px var(--surface-shadow);
   border-radius: 8px;
   max-width: 350px;
-  position: relative;
   opacity: 1;
+  position: absolute;
+  top: 10rem;
+  z-index: 10;
 }
 
 .weather-card {
-    background-color: var(--shadow);
+    background-color: var(--surface-shadow);
   color: var(--accent);
-  box-shadow: 0 4px 6px var(--shadow);
+  box-shadow: 0 4px 6px var(--surface-shadow);
   border-radius: 8px;
   margin-left: 1rem;
-  margin-top: 0;
   max-width: 350px;
-  position: relative;
   opacity: 1;
+  position: absolute;
+  top: 35rem;
+  z-index: 10;
 }
 
 .weather-card h2 {
     margin-left: -0.5rem;
-    max-width: 400px;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    padding: 2px;
 }
 .data-card h2 {
     max-width: 200px;
@@ -94,11 +100,13 @@ h2 {
 }
 
 .weather-card img {
-    height:fit-content;
-    width:fit-content;
-    margin-top: -3.8rem;
-    margin-left: 20rem;
+    height: auto;
+    width: fit-content;
+    margin-top: -3.7rem;
+    margin-left: 19rem;
+    margin-right: 1rem;
     background-color: var(--card-bg);
+    border: 1px solid transparent;
 }
 
 
@@ -107,6 +115,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   font-size: smaller;
+  margin-top: 4px;
 }
 .first-green {
     background-color: var(--primary-color);
@@ -116,25 +125,27 @@ footer {
     background-color: var(--primary-color);
 }
 /* for larger screens */
-@media (min-width: 700px) {
+@media (min-width: 750px) {
    .weather-card {
   border-radius: 8px;
   max-width: 350px;
-  margin-left: 900px;
-  position: relative;
-    opacity: 1;
+  margin-left: auto;
+  margin-right: 0;
+  position: absolute;
+  opacity: 1;
+  top: 30rem;
+  left: 55rem;
+  z-index: 10;
+  align-content: end;
   }
-}
 
-  @media (min-width: 700px) {
   .weather-card h2::after  {
     content: "⛅";
   }
 
-  @media (min-width: 700px) {
-    .weather-card img {
-        display: none;
+   .weather-card img {
+      display: none;
     }
-  }
+  
 }
 
