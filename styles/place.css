@@ -58,7 +58,7 @@ h2 {
 }
 
 .data-card {
-  background-color: 0 4px 6px var(--shadow);
+  background-color: var(--shadow);
   color: var(--accent);
   padding: 1rem;
   border: 1rem;
@@ -71,7 +71,7 @@ h2 {
 }
 
 .weather-card {
-    background-color: 0 4px 6px var(--shadow);
+    background-color: var(--shadow);
   color: var(--accent);
   box-shadow: 0 4px 6px var(--shadow);
   border-radius: 8px;
