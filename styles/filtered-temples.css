@@ -4,9 +4,13 @@
   --secondary-color: #f2f2f2;
   --tetiary-color: #444;
   --accent-color: #f9fafc;
-  --constant-color: white;
+  --constant-color: #ffffff;
   --text-color: #222;
   --font-family: "Inter", sans-serif;
+
+  /* Shadows (as variables to avoid raw RGBA in CSS rules) */
+  --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
 
 * {
@@ -47,7 +51,7 @@ header h1 {
   font-size: 2rem;
   background: none;
   border: none;
-  color: white;
+  color: var(--constant-color);
   cursor: pointer;
   position: absolute;
   right: 1rem;
@@ -128,14 +132,14 @@ main p {
 .card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px var(--shadow-light);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 8px 18px var(--shadow-heavy);
 }
 
 .card h3 {
