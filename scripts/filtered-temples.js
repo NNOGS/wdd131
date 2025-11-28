@@ -60,7 +60,7 @@ const temples = [
     location: "Apia, Samoa",
     dedicated: "1983, August, 5",
     area: 18691,
-    imageUrl: "../images/apia-samoa-t.jpg"
+    imageUrl: "images/apia-samoa-t.jpg"
     
   },
   {
@@ -68,7 +68,7 @@ const temples = [
     location: "Lisbon, Portugal",
     dedicated: "2019, September, 15",
     area: 24000,
-    imageUrl: "../images/lisbon-portugal-t.jpg"
+    imageUrl: "images/lisbon-portugal-t.jpg"
       
   },
   {
@@ -76,7 +76,7 @@ const temples = [
     location: "Oakland Califonia, United States",
     dedicated: "1964, November, 17",
     area: 95000,
-    imageUrl: "../images/oakland-california-t.jpg"
+    imageUrl: "images/oakland-california-t.jpg"
       
   }
 ];
