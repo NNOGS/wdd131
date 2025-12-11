@@ -1,47 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta name="description" content="">
-    <meta name="author" content="Obinna Godswill Sosthenes Njoku">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/design.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nav Test</title>
+  <style>
+    /* basic page */
+    body{font-family:Arial, sans-serif;margin:0}
+    header{background:#2be299;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;position:relative}
+    .logo img{height:48px}
+
+    /* desktop nav */
+    nav{display:flex;align-items:center;gap:16px}
+    .nav-links{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    .nav-links a{text-decoration:none;color:#000;padding:6px 8px;font-weight:600}
+
+    /* hamburger hidden on desktop */
+    .nav-toggle{display:none;background:none;border:0;font-size:26px;cursor:pointer}
+
+    /* mobile rules */
+    @media (max-width:800px){
+      .nav-toggle{display:block}
+      .nav-links{
+        display:none;
+        position:absolute;
+        top:64px;
+        right:12px;
+        width:220px;
+        flex-direction:column;
+        background:#fff;
+        padding:12px;
+        border-radius:8px;
+        box-shadow:0 8px 20px rgba(0,0,0,.12);
+      }
+      .nav-links.active{display:flex}
+      .nav-links li a{display:block;padding:10px 6px;color:#000}
+    }
+  </style>
 </head>
 <body>
-    <header>
-	<div class="banner">Join us for the ribbon cutting cermony at 🪲 The Lazy Bug! Friday at 11:00 AM</div>
-	<h1>Design Principles</h1>
-</header>
-<main>
-	<h2>Heading 2</h2>
-	<section>
-		<h3>Article</h3>
-		<article>
-			<p>💯 Porem, ipsum dolor sit amet consectetur adipisicing elit. Soluta consequuntur recusandae molestias nemo, earum quam eius quis cupiditate blanditiis voluptates? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolore ipsum commodi doloremque quos culpa, autem, ex dolorum ullam eius adipisci perspiciatis sequi, accusantium facere molestiae ad omnis nobis. Culpa?</p>
-		</article>
-	</section>
-	<section>
-		<h3>List</h3>
-		<ul>
-			<li>Item 1</li>
-			<li>Item 2</li>
-			<li>Item 3<br><br></li>
-			<li>Item 4</li>
-			<li>Item 5</li>
-		</ul>
-	</section>
 
-	<div class="callout">
-		<h3>Color Contrast</h3>
-		<p>This color contrast violates accessiblity rules. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facilis eius dolor. Voluptatibus eligendi officia quae dolores incidunt voluptatem placeat quidem aperiam, aliquam doloribus fuga, ad recusandae. Quisquam, culpa quam minima cumque at consectetur debitis error! Est impedit labore pariatur!</p>
-	</div>
+<header>
+  <div class="logo"><img src="https://via.placeholder.com/80x48?text=logo" alt="logo"></div>
+
+  <nav>
+    <ul class="nav-links" id="mainNav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Devices</a></li>
+      <li><a href="#">Setup</a></li>
+      <li><a href="#">References</a></li>
+    </ul>
+
+    <!-- Make sure this button is exactly like this -->
+    <button class="nav-toggle" aria-expanded="false">☰</button>
+  </nav>
+</header>
+
+<main style="padding:20px">
+  <p>Resize the browser to less than 800px wide and click the burger (☰).</p>
 </main>
-<footer>
-	Footer Content
-</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks  = document.querySelector(".nav-links");
+
+  if (!navToggle || !navLinks) {
+    console.error("Nav elements not found", {navToggle, navLinks});
+    return;
+  }
+
+  // toggle open/close
+  navToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle("active");
+    const open = navLinks.classList.contains("active");
+    navToggle.textContent = open ? "✖" : "☰";
+    navToggle.setAttribute("aria-expanded", open);
+  });
+
+  // close when a link clicked
+  navLinks.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+      navLinks.classList.remove("active");
+      navToggle.textContent = "☰";
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!navLinks.classList.contains("active")) return;
+    const path = e.composedPath ? e.composedPath() : (e.path || []);
+    if (!path.includes(navLinks) && !path.includes(navToggle)) {
+      navLinks.classList.remove("active");
+      navToggle.textContent = "☰";
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // escape to close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+      navToggle.textContent = "☰";
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.focus();
+    }
+  });
+});
+</script>
+
 </body>
 </html>
