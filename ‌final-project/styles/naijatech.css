@@ -2,12 +2,12 @@
       --primary-color: #2be299;
       --secondary-color: #fff
       --primary1: #0066cc;     /* Headings, accents */
-      --secondary: #0a2a43;   /* Header/footer background */
+      --secondary: #7d92a1;   /* Header/footer background */
       --logo: rgba(0,0,0,0.5); /* logo drop shadow */
       --light: #f4f4f4;       /* Page background */
       --text: #333;           /* Body text */
       --background-color: #bebdbd;
-      --accent: #ffd54f;      /* Highlight elements */
+      --accent: #ddd;      /* Highlight elements */
       --box-shadow: rgba(0,0,0,0.1); /* subtle shadow color */
       --box-shadow2: rgba(0,0,0,0.12); /* slightly stronger shadow */
     }
@@ -129,7 +129,7 @@ nav {
 }
 
 .accessory-card {
-      background-color: #fff;
+      background-color: var(--secondary-color);
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
@@ -175,6 +175,8 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin: 2rem;
+    padding: 6px;
 }
 
 label {
@@ -208,7 +210,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: #004999;
+    background: var(--secondary);
+    color: var(--text)
 }
 
 fieldset {
@@ -225,9 +228,7 @@ legend {
     margin: 2rem;
 }
 
-form {
-    margin: 2rem;
-}
+
 /* ===========================
    FOOTER
 =========================== */
