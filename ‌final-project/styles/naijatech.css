@@ -1,0 +1,303 @@
+:root {
+      --primary-color: #2be299;
+      --secondary-color: #fff
+      --primary1: #0066cc;     /* Headings, accents */
+      --secondary: #7d92a1;   /* Header/footer background */
+      --logo: rgba(0,0,0,0.5); /* logo drop shadow */
+      --light: #f4f4f4;       /* Page background */
+      --text: #333;           /* Body text */
+      --background-color: #bebdbd;
+      --accent: #ddd;      /* Highlight elements */
+      --box-shadow: rgba(0,0,0,0.1); /* subtle shadow color */
+      --box-shadow2: rgba(0,0,0,0.12); /* slightly stronger shadow */
+    }
+
+/* ===========================
+   RESET
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--light);
+}
+
+/* ===========================
+   HEADER + NAVIGATION
+=========================== */
+header {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 55px;
+  filter: drop-shadow(1px 1px 2px var(--logo));
+}
+
+nav {
+    position: relative;  /* needed for mobile dropdown */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links {
+    display: flex;       /* horizontal on desktop */
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+/* ===========================
+   CAMERA GRID
+=========================== */
+#cameras {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+#deviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.device-card {
+     background-color: var(--secondary-color);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px var(--box-shadow);
+}
+
+.device-card img {
+     width: 100%;
+  max-height: 150px;       /* limit height */
+  object-fit: contain;     /* fit inside card without distortion */
+  margin-bottom: 10px;
+  image-rendering: auto;   /* default rendering, sharper if possible */
+  filter: contrast(1.1) saturate(1.2); /* enhance color slightly */
+}
+
+/* Titles and category text */
+.device-card h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+
+.device-card p {
+  font-size: 0.85rem;
+  color: #555;
+}
+/* ===========================
+   ACCESSORIES GRID
+=========================== */
+#accessories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.accessory-card {
+      background-color: var(--secondary-color);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px var(--box-shadow);
+}
+
+.accessory-card img {
+     width: 100%;
+  max-height: 150px;       /* limit height */
+  object-fit: contain;     /* fit inside card without distortion */
+  margin-bottom: 10px;
+  image-rendering: auto;   /* default rendering, sharper if possible */
+  filter: contrast(1.1) saturate(1.2); /* enhance color slightly */
+}
+.accessory-card h3 {
+ font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+/* ===========================
+   SETUP SECTIONS
+=========================== */
+#set-up,
+#set-up1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;                  /* space between columns */
+    padding: 1rem 2rem;         /* top/bottom 1rem, left/right 2rem instead of huge margin */
+    border-radius: 1rem;
+    background-color: var(--background-color);
+}
+
+.faq {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--background-color);
+}
+/* ===========================
+   FORMS
+=========================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 6px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: .7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 0.6rem;
+}
+
+input[type="submit"] {
+    background: var(--primary1);
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background: var(--secondary);
+    color: var(--text)
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.set{
+    margin: 2rem;
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    margin-top: 2rem;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+/* Small Tablets & Phones */
+@media (max-width: 800px) {
+
+    /* Hamburger visible */
+    .nav-toggle {
+        display: block;
+        
+    }
+
+    /* Hide nav links until active */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 12px;
+        width: 220px;
+        background: var(--secondary-color);
+        border-radius: 8px;
+        padding: 12px;
+        box-shadow: 0 6px 18px var(--box-shadow2);
+        z-index: 40;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px 6px;
+        background-color: var(--secondary);
+    }
+
+    #cameras,
+    #accessories {
+        grid-template-columns: 1fr;
+    }
+
+    #set-up,
+    #set-up1 {
+        grid-template-columns: 1fr;
+        margin-right: 0.5rem;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+}
