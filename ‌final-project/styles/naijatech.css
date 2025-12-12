@@ -278,6 +278,7 @@ footer {
     .nav-links li a {
         display: block;
         padding: 10px 6px;
+        background-color: var(--secondary);
     }
 
     #cameras,
@@ -298,4 +299,5 @@ footer {
         margin: 1rem;
         padding: 1rem;
     }
+
 }
