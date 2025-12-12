@@ -1,0 +1,43 @@
+:root {
+    max-width: 600px;
+}
+
+body{
+    align-content: center;
+    margin-left: 30rem;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 6rem;
+}
+
+main {
+    margin: auto;
+    width: 400;
+    display: block;
+    direction: column;
+}
+
+img {
+    width: 400px;
+    height: 600px;
+    background: #000;
+    animation: fade 15s;
+}
+
+footer {
+    width: 400px;
+    text-align: center;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

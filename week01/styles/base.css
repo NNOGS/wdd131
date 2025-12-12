@@ -1,0 +1,186 @@
+:root {
+    --primary-color: darkblue;
+    --secondary-color: white;
+    --tertiary-color: whitesmoke; 
+    --accent-color: black;
+    --accent1-color: lightslategray;
+    --accent2-color: #ccc;
+}
+
+/* --------------------------
+   GLOBAL STYLES
+--------------------------- */
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+header {
+    margin: 0;
+    padding: 0;
+}
+main {
+    padding: 1rem;
+}
+
+/* Headings */
+h1 {
+    font-weight: 100;
+}
+
+h2 {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    margin-top: 0;
+    padding: 0.5rem;
+}
+
+h3 {
+    text-align: center;
+    margin: 1rem auto 0 auto;
+}
+
+/* --------------------------
+   HEADER
+--------------------------- */
+#course-title {
+    display: block;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1.2rem;
+    margin: 0;
+    font-weight: bolder;
+    font-size: large;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--accent-color);
+    padding: 0.8rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    font-weight: 500;
+}
+
+nav a:hover {
+    border-radius: 2px; 
+    color: var(--accent1-color);
+}
+
+/* --------------------------
+   MAIN SECTION
+--------------------------- */
+.name {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.card-items {
+    display: grid;
+    grid-template-columns: 75% auto;
+    gap: 0.5rem;
+    
+}
+
+.card,
+.card {
+    border: 1px solid var(--accent-color);
+    border-top: none;
+    border-radius: 0.5rem;
+    padding: 0;
+}
+
+/* About Me Section */
+.about-me p {
+    margin: 2rem 0 4rem 1rem;
+}
+.about-me img{
+    border: 1px solid var(--accent2-color);
+    border-radius: 1rem;
+}
+.card img {
+    float: right;
+    margin: 0 1rem 0.5rem 0.5rem;
+    width: 150px;
+    height: 200px;
+    border-radius: 0.3rem;
+}
+
+/* City and state separator line */
+hr {
+    border: 1px solid var(--accent2-color);
+    width: 60%;
+    margin: 0rem auto 0.5rem 6rem;
+}
+
+/* Image + text layout */
+.parts {
+    display: grid;
+    grid-template-columns: 30% 60% 10%;
+    gap: 0.5rem;
+    padding: 2rem;
+}
+
+#pic img {
+    height: min-content;
+    border: 1px solid var(--accent2-color);
+    padding-left: 6rem;
+    margin: 3rem 2rem 1rem;
+    
+}
+
+h4 {
+    margin-top: 1rem;
+    font-size: large;
+    text-align: center;
+}
+
+/* Paragraphs */
+p {
+    font-size: medium;
+    margin: 0.5rem;
+    line-height: 1.6;
+}
+.parts p {
+    margin: 0;
+    line-height: 2;
+}
+
+/* --------------------------
+   WEB DEV RESOURCES SECTION
+--------------------------- */
+ul {
+    list-style-type: disc;
+    padding: 2rem;
+    margin-top: 8rem;
+}
+
+ul li a {
+    color: var(--primary-color);
+    line-height: 2;
+}
+
+ul li a:hover {
+    color: var(--accent1-color);
+}
+
+/* --------------------------
+   FOOTER
+--------------------------- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}

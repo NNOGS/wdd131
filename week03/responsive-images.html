@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="author" content="Obinna Godswill Sosthenes Njoku">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                <img src="images/hero-small.webp" alt="Kirtland Temple in Kirtland, Ohio during a sunny day" width ="500" height="250">
+            </picture>
+            <h1>Responsive Images Example</h1>
+        </div>
+    </main>
+</body>
+</html>
+ <nav>
+            <div class="logo">Naija HomeTech</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="devices.html">Devices</a></li>
+                <li><a href="setup.html">Setup Tutorials</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+            <button class="nav-toggle">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Smart Home Devices</h1>
+        <div class="filters">
+            <label for="category">Filter by category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="bulbs">Smart Bulbs</option>
+                <option value="plugs">Smart Plugs</option>
+                <option value="cameras">Cameras</option>
+                <option value="speakers">Speakers</option>
+            </select>
+        </div>
+
+        <div class="device-grid" id="deviceGrid">
+            <!-- JS will render devices here -->
+        </div>
+    </main>
